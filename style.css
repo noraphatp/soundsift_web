@@ -1,35 +1,112 @@
 /* default */
 body {
-	margin: 0;
-	padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-	width: 100vw;
-	height: 100vh;
-	margin: 0 auto;
-	padding: 0;
+  width: 100vw;
+  height: 100vh;
+  /* scrollable */
+  overflow: auto;
+  margin: 0 auto;
+  padding: 0;
   background: linear-gradient(45deg, #196164, #15173a);
+  text-align: center;
 }
 
 .navbar {
-	background-color: #161616;
-	overflow: hidden;
+  background-color: #161616;
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2);
 }
 
 /* Style the links inside the navigation bar */
 .navbar a {
-	float: left;
-	color: #f2f2f2;
-	text-align: center;
-	padding: 20px 32px;
-	text-decoration: none;
-	font-size: 17px;
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 20px 32px;
+  text-decoration: none;
+  font-size: 17px;
 }
 
 /* Change the color of links on hover */
 .navbar a:hover {
-	background-color: #f1faee;
-	color: black;
-	transition: 0.5s;
+  background-color: #f1faee;
+  color: black;
+  transition: 0.5s;
+}
+
+.logo {
+  /* make it central without using display block*/
+  display: block;
+  margin-top: 3rem;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  /* original dimensions are 1008x992 */
+  width: 252px;
+  height: 248px;
+}
+
+.sound_sift {
+  text-align: center;
+  color: #f2f2f2;
+  font-size: 4rem;
+  margin-top: 0.5rem;
+  padding: 0;
+  /* text spacing */
+  letter-spacing: 0.1rem;
+}
+
+.description-section {
+  display: inline-block;
+  color: #333;
+  margin-top: 0.5rem;
+  margin-left: 20rem;
+  margin-right: 20rem;
+  background-color: #f1faee;
+  padding: 2rem 4rem;
+  border-radius: 30px;
+  box-shadow: 0 0 20px 0 #00000033;
+}
+
+.description-header {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+.description-text {
+  font-size: 1.05rem;
+  margin-top: 0;
+}
+
+.get_started_button {
+  display: block;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f1faee;
+  background-color: #196164;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 0 20px 0 #00000033;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.get_started_button:hover {
+  background-color: #f1faee;
+  color: #196164;
+  transform: scale(1.1);
+}
+
+.get_started_button:active {
+  transform: scale(0.95);
 }
