@@ -1,0 +1,36 @@
+/* default */
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	margin: 0 auto;
+	height: 100vh;
+	width: 100vw;
+	overflow: scroll;
+	padding: 0;
+  background: linear-gradient(45deg, #196164, #15173a);
+}
+
+.navbar {
+	background-color: #161616;
+	overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.navbar a {
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 20px 32px;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.navbar a:hover {
+	background-color: #f1faee;
+	color: black;
+	transition: 0.5s;
+}
