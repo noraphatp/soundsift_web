@@ -18,7 +18,7 @@
 .navbar {
   background-color: #161616;
   overflow: hidden;
-  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 8px 0 #ffffff33;
 }
 
 /* Style the links inside the navigation bar */
@@ -54,7 +54,7 @@
   text-align: center;
   color: #f2f2f2;
   font-size: 4rem;
-  margin-top: 0.5rem;
+  /* margin-top: 0.5rem; */
   padding: 0;
   /* text spacing */
   letter-spacing: 0.1rem;
