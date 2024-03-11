@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Find songs</title>
-    <link rel="stylesheet" href="/css/find_songs.css">
-</head>
-<body>
+    <link rel="stylesheet" href="/css/find_songs.css" />
+  </head>
+  <body>
     <section class="container">
-        <div class="navbar">
-          <a class="active" href="index.html">Home</a>
-          <a href="find_songs.html">Find songs</a>
-          <a href="#library">Library</a>
-        </div>
-      </section>
-</body>
+      <div class="navbar">
+        <a class="active" href="index.html">Home</a>
+        <a href="find_songs.html">Find songs</a>
+        <a href="#library">Library</a>
+      </div>
+      <div class="search-container">
+        <input type="text" id="searchBar" placeholder="Type a song name..." />
+        <button onclick="searchSong()">Search</button>
+        <button onclick="clearResults()">Clear</button>
+      </div>
+      <div id="results"></div>
+    </section>
+    <script src="find_songs.js"></script>
+  </body>
 </html>
