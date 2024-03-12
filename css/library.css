@@ -19,6 +19,8 @@
   background-color: #161616;
   overflow: hidden;
   box-shadow: 0 4px 8px 0 #ffffff33;
+  position: relative;
+  z-index: 2;
 }
 
 /* Style the links inside the navigation bar */
@@ -38,18 +40,77 @@
   transition: 0.5s;
 }
 
-.card-container {
+.side-card-container {
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  width: 10%;
+  height: 100%;
+  background-color: #2e2d2d;
+  position: relative;
+  z-index: 1;
+}
+
+.my-playlists-text {
+  color: #f2f2f2;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 1rem;
+  text-align: center;
+}
+
+.create-new-playlist {
+  background-color: #f2f2f2;
+  color: #2e2d2d;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 1rem;
+  padding: 0.4rem;
+  border: none;
+  border-radius: 1rem;
+}
+
+.create-new-playlist:hover {
+  background-color: #413f3f;
+  color: #f2f2f2;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.create-new-playlist:active {
+  background-color: #f1faee;
+  color: #413f3f;
+  transform: scale(1.05);
+  cursor: pointer;
+  transition: 0.2s;
 }
 
 .card {
-  margin: 0;
-  padding: 0;
-  flex: 0 1 auto;
+  display: inline-block;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  /* background-color: #196164; */
+  box-shadow: 0 0 20px 0 #00000033;
+  color: #f2f2f2;
+}
+
+.card:hover {
+  background-color: #413f3f;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card:active {
+  background-color: #f1faee;
+  color: #413f3f;
+  transform: scale(1.05);
+  cursor: pointer;
+  transition: 0.2s;
 }
 
 .card img {
-  width: 20%;
-  object-fit: cover;
+  /* max-width within the size of card */
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
