@@ -82,6 +82,10 @@
   margin-top: 0;
 }
 
+.get_started_button_wrap {
+  text-decoration: none;
+}
+
 .get_started_button {
   display: block;
   margin-top: 2rem;

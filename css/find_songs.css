@@ -38,9 +38,32 @@
   transition: 0.5s;
 }
 
+.description-section {
+  display: inline-block;
+  color: #333;
+  margin-top: 4rem;
+  max-width: 50%;
+  background-color: #f1faee;
+  padding: 2rem 4rem;
+  border-radius: 30px;
+  box-shadow: 0 0 20px 0 #00000033;
+}
+
+.description-header {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.description-text {
+  font-size: 1rem;
+  margin-top: 0;
+}
+
 .search-container {
   justify-content: center; /* Center the items horizontally */
-  margin-top: 8rem;
+  margin-top: 4rem;
 }
 
 /* Style the input field */
