@@ -40,6 +40,13 @@
   transition: 0.5s;
 }
 
+.main-body-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
 .side-card-container {
   display: flex;
   flex-direction: column;
@@ -67,6 +74,7 @@
   padding: 0.4rem;
   border: none;
   border-radius: 1rem;
+  box-shadow: 0 0 20px 0 #00000033;
 }
 
 .create-new-playlist:hover {
@@ -89,7 +97,6 @@
   padding: 1rem;
   margin: 1rem;
   border-radius: 1rem;
-  /* background-color: #196164; */
   box-shadow: 0 0 20px 0 #00000033;
   color: #f2f2f2;
 }
@@ -113,4 +120,63 @@
   width: 100%;
   height: auto;
   object-fit: contain;
+}
+
+.main-card-container {
+  margin-left: 4rem;
+  margin-top: 2rem;
+}
+
+.main-card-header {
+  text-align: left;
+  color: #f2f2f2;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 30%;
+  gap: 2rem;
+}
+
+.body-card {
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px 0 #00000033;
+  color: #f2f2f2;
+  object-fit: contain;
+  text-align: center;
+  background-color: #2e2d2d;
+}
+
+.body-card:hover {
+  background-color: #413f3f;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.body-card:active {
+  background-color: #f1faee;
+  color: #413f3f;
+  transform: scale(1.05);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.body-card p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.body-card img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
 }
