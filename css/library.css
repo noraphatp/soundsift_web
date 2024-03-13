@@ -151,7 +151,6 @@
   box-shadow: 0 0 20px 0 #00000033;
   color: #f2f2f2;
   object-fit: contain;
-  text-align: center;
   background-color: #2e2d2d;
 }
 
@@ -169,10 +168,13 @@
   transition: 0.2s;
 }
 
-.body-card p {
-  margin-top: 1rem;
-  font-size: 1.2rem;
+.artist-name {
+  font-size: 1rem;
   font-weight: 400;
+}
+
+.album-name {
+  font-size: 0.8rem;
 }
 
 .body-card img {
