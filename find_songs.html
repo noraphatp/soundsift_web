@@ -29,12 +29,43 @@
           id="searchBar"
           placeholder="Type a song name/link ..."
         />
-        <button onclick="searchSong()">Search</button>
-        <button onclick="clearResults()">Clear</button>
-        <button id="filter-button">Filter</button>
-        <div class="modal">
+        <button class="search-container-button" onclick="searchSong()">Search</button>
+        <button class="search-container-button" onclick="clearResults()">Clear</button>
+        <button class="search-container-button" id="filter-button">Filter</button>
+        <div id="myModal" class="modal">
           <div class="modal-content">
-            
+            <span class="close">&times;</span>
+            <div class="filter-heading-container">
+              <div class="filter-heading">
+                <p class="heading">Genre</p>
+                <button id="genre1" class="genre-button" onclick="toggleButton('genre1')">Pop</button>
+                <button id="genre2" class="genre-button" onclick="toggleButton('genre2')">Hiphop</button>
+                <button id="genre3" class="genre-button" onclick="toggleButton('genre3')">Jazz</button>
+                <button id="genre4" class="genre-button" onclick="toggleButton('genre4')">Rock</button>
+                <button id="genre5" class="genre-button" onclick="toggleButton('genre5')">Classical</button>
+                <button id="genre6" class="genre-button" onclick="toggleButton('genre6')">Country</button>
+                <button id="genre7" class="genre-button" onclick="toggleButton('genre7')">EDM</button>
+              </div>
+              <div class="filter-heading">
+                <p class="heading">Release Year</p>
+                <div class="year-slide-container">
+                  <input type="range" min="1950" max="2024" value="2024" class="slider" id="release-year-slider">
+                </div>
+                <p class="slider-value" id="release-year"><span id="value"></span></p>
+              </div>
+              <div class="filter-heading">
+                <p class="heading">Duration</p>
+                <button id="duration1" class="genre-button" onclick="toggleButton('duration1')">Under 2 minutes</button>
+                <button id="duration2" class="genre-button" onclick="toggleButton('duration2')">2 to 6 minutes</button>
+                <button id="duration3" class="genre-button" onclick="toggleButton('duration3')">6 minutes and above</button>
+              </div>
+              <div class="filter-heading">
+                <p class="heading">Mood</p>
+              </div>
+              <div class="filter-heading">
+                <p class="heading">Other</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
