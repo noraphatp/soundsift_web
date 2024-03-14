@@ -16,19 +16,13 @@
       <div class="description-section">
         <p class="description-header">SiftSearch</p>
         <p class="description-text">
-          SoundSift's provides <b>SiftSearch</b>, an advanced AI search engine,
-          which allows you to search for songs based on their complex musical
-          characteristics. Enter the song name in the search bar below to get
-          started. Below will be a list of songs ordered by their similarity
-          score to the song you searched for.
+          SoundSift's provides <b>SiftSearch</b>, an advanced AI search engine, which allows you to search for songs
+          based on their complex musical characteristics. Enter the song name in the search bar below to get started.
+          Below will be a list of songs ordered by their similarity score to the song you searched for.
         </p>
       </div>
       <div class="search-container">
-        <input
-          type="text"
-          id="searchBar"
-          placeholder="Type a song name/link ..."
-        />
+        <input type="text" id="searchBar" placeholder="Type a song name/link ..." />
         <button class="search-container-button" onclick="searchSong()">Search</button>
         <button class="search-container-button" onclick="clearResults()">Clear</button>
         <button class="search-container-button" id="filter-button">Filter</button>
@@ -49,15 +43,15 @@
               <div class="filter-heading">
                 <p class="heading">Release Year</p>
                 <div class="year-slide-container">
-                  <input type="range" min="1950" max="2024" value="2024" class="slider" id="release-year-slider">
+                  <input type="range" min="1950" max="2024" value="2024" class="slider" id="release-year-slider" />
                 </div>
                 <p class="slider-value" id="release-year"><span id="value"></span></p>
               </div>
               <div class="filter-heading">
                 <p class="heading">Duration</p>
                 <button id="duration1" class="genre-button" onclick="toggleButton('duration1')">Under 2 minutes</button>
-                <button id="duration2" class="genre-button" onclick="toggleButton('duration2')">2 to 6 minutes</button>
-                <button id="duration3" class="genre-button" onclick="toggleButton('duration3')">6 minutes and above</button>
+                <button id="duration2" class="genre-button" onclick="toggleButton('duration2')">2 - 6 minutes</button>
+                <button id="duration3" class="genre-button" onclick="toggleButton('duration3')">Above 6 minutes</button>
               </div>
               <div class="filter-heading">
                 <p class="heading">Mood</p>
