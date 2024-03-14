@@ -1,5 +1,6 @@
 // can add corresponding image and such later on
 const songs = [
+  // add image cover
   { name: "Song 1", artist: "Artist A", similarity: 0.93 },
   { name: "Song 2", artist: "Artist B", similarity: 0.87 },
   { name: "Song 3", artist: "Artist C", similarity: 0.86 },
@@ -18,7 +19,6 @@ function searchSong() {
       songDiv.classList.add("result-box");
       songDiv.classList.add("song-result");
       songDiv.innerHTML = `<p>${song.name} - ${song.artist}</p><p>Similarity: ${song.similarity}</p>`;
-      // add button
       const button = document.createElement("button");
       button.classList.add("result-button");
       button.innerText = "Add";
@@ -88,3 +88,7 @@ output.innerHTML = slider.value; // Display the default slider value
 slider.oninput = function () {
   output.innerHTML = this.value;
 };
+
+function updateMoodValue(value, outputId) {
+  document.getElementById(outputId).textContent = value;
+}

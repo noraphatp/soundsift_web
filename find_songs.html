@@ -15,14 +15,10 @@
       </div>
       <div class="description-section">
         <p class="description-header">SiftSearch</p>
-        <p class="description-text">
-          SoundSift's provides <b>SiftSearch</b>, an advanced AI search engine, which allows you to search for songs
-          based on their complex musical characteristics. Enter the song name in the search bar below to get started.
-          Below will be a list of songs ordered by their similarity score to the song you searched for.
-        </p>
+        <p class="description-text">SoundSift's provides <b>SiftSearch</b>, an advanced AI search engine, which allows you to search for songs based on their complex musical characteristics. Enter the song name in the search bar below to get started. Below will be a list of songs ordered by their similarity score to the song you searched for.</p>
       </div>
       <div class="search-container">
-        <input type="text" id="searchBar" placeholder="Type a song name/link ..." />
+        <input type="text" id="searchBar" placeholder="Type a song/artist name" />
         <button class="search-container-button" onclick="searchSong()">Search</button>
         <button class="search-container-button" onclick="clearResults()">Clear</button>
         <button class="search-container-button" id="filter-button">Filter</button>
@@ -55,9 +51,28 @@
               </div>
               <div class="filter-heading">
                 <p class="heading">Mood</p>
+                <p class="mood-text">Energetic</p>
+                <input type="range" id="energetic" class="slider" name="energetic" min="0" max="100" oninput="updateMoodValue(this.value, 'energeticValue')" />
+                <span id="energeticValue">50</span>
+                <p class="mood-text">Happy</p>
+                <input type="range" id="happy" class="slider" name="happy" min="0" max="100" oninput="updateMoodValue(this.value, 'happyValue')" />
+                <span id="happyValue">50</span>
+                <p class="mood-text">Romance</p>
+                <input type="range" id="romance" class="slider" name="romance" min="0" max="100" oninput="updateMoodValue(this.value, 'romanceValue')" />
+                <span id="romanceValue">50</span>
+                <p class="mood-text">Dancability</p>
+                <input type="range" id="dancability" class="slider" name="dancability" min="0" max="100" oninput="updateMoodValue(this.value, 'dancabilityValue')" />
+                <span id="dancabilityValue">50</span>
               </div>
               <div class="filter-heading">
-                <p class="heading">Other</p>
+                <p class="heading">Priority</p>
+                <button id="genre8" class="genre-button" onclick="toggleButton('genre8')">Guitar</button>
+                <button id="genre9" class="genre-button" onclick="toggleButton('genre9')">Electric Guitar</button>
+                <button id="genre10" class="genre-button" onclick="toggleButton('genre10')">Violin</button>
+                <button id="genre11" class="genre-button" onclick="toggleButton('genre11')">Drums</button>
+                <button id="genre12" class="genre-button" onclick="toggleButton('genre12')">Bass</button>
+                <button id="genre13" class="genre-button" onclick="toggleButton('genre13')">Saxophone</button>
+                <button id="genre14" class="genre-button" onclick="toggleButton('genre14')">Trumpet</button>
               </div>
             </div>
           </div>
