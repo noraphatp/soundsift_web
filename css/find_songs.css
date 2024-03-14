@@ -68,10 +68,11 @@
 
 /* Style the input field */
 #searchBar {
-  padding: 10px 15px;
+  padding: 0.5rem 4rem;
   font-size: 16px;
-  border: 2px solid #ddd;
+  border: 0.2rem solid #ddd;
   border-radius: 20px;
+  margin-left: 10rem;
 }
 
 .search-container button {

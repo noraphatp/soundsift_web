@@ -14,20 +14,29 @@
         <a href="library.html">Library</a>
       </div>
       <div class="description-section">
-        <p class="description-header">
-          Find songs based on their acoustic features
-        </p>
+        <p class="description-header">SiftSearch</p>
         <p class="description-text">
-          SoundSift's advanced AI technology allows you to search for songs
-          based on their complex musical characteristics. Enter the song name in
-          the search bar below to get started. Below will be a list of songs
-          ordered by their similarity score to the song you searched for.
+          SoundSift's provides <b>SiftSearch</b>, an advanced AI search engine,
+          which allows you to search for songs based on their complex musical
+          characteristics. Enter the song name in the search bar below to get
+          started. Below will be a list of songs ordered by their similarity
+          score to the song you searched for.
         </p>
       </div>
       <div class="search-container">
-        <input type="text" id="searchBar" placeholder="Type a song name..." />
+        <input
+          type="text"
+          id="searchBar"
+          placeholder="Type a song name/link ..."
+        />
         <button onclick="searchSong()">Search</button>
         <button onclick="clearResults()">Clear</button>
+        <button id="filter-button">Filter</button>
+        <div class="modal">
+          <div class="modal-content">
+            
+          </div>
+        </div>
       </div>
       <div id="results"></div>
     </section>

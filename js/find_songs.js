@@ -4,7 +4,6 @@ const songs = [
   { name: "Song 2", artist: "Artist B", similarity: 0.87 },
   { name: "Song 3", artist: "Artist C", similarity: 0.86 },
   { name: "Song 4", artist: "Artist D", similarity: 0.85 },
-  { name: "Song 5", artist: "Artist E", similarity: 0.84 },
 ];
 
 function searchSong() {
