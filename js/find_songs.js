@@ -1,10 +1,10 @@
 // can add corresponding image and such later on
 const songs = [
   // add image cover
-  { name: "Song 1", artist: "Artist A", similarity: 0.93 },
-  { name: "Song 2", artist: "Artist B", similarity: 0.87 },
-  { name: "Song 3", artist: "Artist C", similarity: 0.86 },
-  { name: "Song 4", artist: "Artist D", similarity: 0.85 },
+  { name: "Song 1", artist: "Artist A", similarity: 0.93, duration: "2:00", image: "/song_covers/acoustic_1.jpg", album: "Album 1" },
+  { name: "Song 2", artist: "Artist B", similarity: 0.87, duration: "3:28", image: "/song_covers/acoustic_2.jpg", album: "Album 2" },
+  { name: "Song 3", artist: "Artist C", similarity: 0.86, duration: "4:00", image: "/song_covers/night_street_1.jpg", album: "Album 3" },
+  { name: "Song 4", artist: "Artist D", similarity: 0.85, duration: "2:33", image: "/song_covers/night_street_2.jpg", album: "Album 2" },
 ];
 
 function searchSong() {
@@ -17,15 +17,131 @@ function searchSong() {
     songs.forEach((song) => {
       const songDiv = document.createElement("div");
       songDiv.classList.add("result-box");
-      songDiv.classList.add("song-result");
-      songDiv.innerHTML = `<p>${song.name} - ${song.artist}</p><p>Similarity: ${song.similarity}</p>`;
-      const button = document.createElement("button");
-      button.classList.add("result-button");
-      button.innerText = "Add";
-      songDiv.appendChild(button);
+
+      const img = document.createElement("img");
+      img.src = song.image;
+      img.alt = "Song cover";
+      songDiv.appendChild(img);
+
+      const songDetails = document.createElement("div");
+      songDetails.classList.add("song-details");
+
+      const songName = document.createElement("p");
+      songName.classList.add("song-name");
+      songName.textContent = song.name;
+      songDetails.appendChild(songName);
+
+      const artistName = document.createElement("p");
+      artistName.classList.add("song-artist");
+      artistName.textContent = song.artist;
+      songDetails.appendChild(artistName);
+
+      const albumName = document.createElement("p");
+      albumName.classList.add("song-album");
+      albumName.textContent = song.album;
+      songDetails.appendChild(albumName);
+
+      songDiv.appendChild(songDetails);
+
+      const otherDetails = document.createElement("div");
+      otherDetails.classList.add("other-details");
+      otherDetails.innerHTML = `
+        <p>Similarity: ${song.similarity}</p>
+        <p>Duration: ${song.duration}</p>
+      `;
+
+      songDiv.appendChild(otherDetails);
+
+      const playButton = document.createElement("play-button");
+      playButton.classList.add("play-button");
+      playButton.innerHTML = `
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
+        </svg>
+      `;
+      songDiv.appendChild(playButton);
+
+      const dropdownButton = document.createElement("button");
+      dropdownButton.classList.add("dropdown-button");
+      dropdownButton.innerHTML = `
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+        </svg>
+      `;
+
+      // Primary Dropdown content container
+      const dropdownContent = document.createElement("div");
+      dropdownContent.classList.add("dropdown-content");
+      dropdownContent.style.display = "none"; // Initially hidden
+
+      // 'Add to Playlist' button inside the dropdown
+      const addToPlaylistButton = document.createElement("button");
+      addToPlaylistButton.textContent = "Add to Playlist";
+      addToPlaylistButton.classList.add("nested-dropdown-button");
+
+      const addToQueueButton = document.createElement("button");
+      addToQueueButton.textContent = "Add to Queue";
+      addToQueueButton.classList.add("nested-dropdown-button");
+
+      const goToSongRadioButton = document.createElement("button");
+      goToSongRadioButton.textContent = "Go to Song Radio";
+      goToSongRadioButton.classList.add("nested-dropdown-button");
+
+      const goToArtistRadioButton = document.createElement("button");
+      goToArtistRadioButton.textContent = "Go to Artist Radio";
+      goToArtistRadioButton.classList.add("nested-dropdown-button");
+
+      // Nested dropdown for playlists
+      const nestedDropdownContent = document.createElement("div");
+      nestedDropdownContent.classList.add("nested-dropdown-content");
+      nestedDropdownContent.style.display = "none"; // Initially hidden
+
+      // Placeholder playlists array (replace with actual playlists)
+      const playlists = ["Playlist 1", "Playlist 2", "Playlist 3"];
+
+      // Populate nested dropdown with playlists
+      playlists.forEach((playlist) => {
+        const playlistOption = document.createElement("a");
+        playlistOption.href = "#";
+        playlistOption.textContent = playlist;
+        playlistOption.addEventListener("click", function (event) {
+          // close all dropdowns
+          document.querySelectorAll(".dropdown-content").forEach(function (dropdown) {
+            dropdown.style.display = "none";
+          });
+        });
+        nestedDropdownContent.appendChild(playlistOption);
+      });
+
+      // Toggle nested dropdown content on click
+      addToPlaylistButton.addEventListener("click", function (event) {
+        event.stopPropagation(); // This stops the click from closing the primary dropdown
+        nestedDropdownContent.style.display = nestedDropdownContent.style.display === "flex" ? "none" : "flex";
+      });
+
+      addToPlaylistButton.appendChild(nestedDropdownContent);
+      dropdownContent.appendChild(addToPlaylistButton);
+      dropdownContent.appendChild(addToQueueButton);
+      dropdownContent.appendChild(goToSongRadioButton);
+      dropdownContent.appendChild(goToArtistRadioButton);
+      dropdownButton.appendChild(dropdownContent);
+
+      // Toggle primary dropdown content on click
+      dropdownButton.onclick = function (event) {
+        event.stopPropagation(); // Prevents click from propagating to nested dropdowns
+        dropdownContent.style.display = dropdownContent.style.display === "flex" ? "none" : "flex";
+      };
+
+      songDiv.appendChild(dropdownButton);
+      resultsContainer.appendChild(songDiv);
       resultsContainer.appendChild(songDiv);
     });
   }
+  window.onclick = function () {
+    document.querySelectorAll(".dropdown-content").forEach(function (dropdown) {
+      dropdown.style.display = "none";
+    });
+  };
 }
 
 function clearResults() {
