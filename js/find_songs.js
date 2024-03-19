@@ -12,6 +12,18 @@ function searchSong() {
   const resultsContainer = document.getElementById("results");
   resultsContainer.innerHTML = "";
 
+  // Function to close all dropdowns
+  function closeAllDropdowns() {
+    document.querySelectorAll(".dropdown-content").forEach(function (dropdown) {
+      dropdown.style.display = "none";
+    });
+    // Also hide all nested dropdown contents
+    document.querySelectorAll(".nested-dropdown-content").forEach(function (dropdown) {
+      dropdown.style.display = "none";
+    });
+  }
+
+  // Close all dropdowns when the user clicks anywhere on the window
   if (searchQuery) {
     // display songs if search query is not empty
     songs.forEach((song) => {
@@ -129,6 +141,7 @@ function searchSong() {
       // Toggle primary dropdown content on click
       dropdownButton.onclick = function (event) {
         event.stopPropagation(); // Prevents click from propagating to nested dropdowns
+        closeAllDropdowns();
         dropdownContent.style.display = dropdownContent.style.display === "flex" ? "none" : "flex";
       };
 
