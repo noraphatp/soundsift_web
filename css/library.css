@@ -140,7 +140,6 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 30%;
   gap: 2rem;
 }
 
@@ -180,5 +179,5 @@
 .body-card img {
   width: 100%;
   height: 12rem;
-  object-fit: cover;
+  object-fit: contain;
 }
