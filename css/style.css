@@ -21,12 +21,16 @@
   box-shadow: 0 4px 8px 0 #ffffff33;
 }
 
+.navbar-container {
+  display: flex;
+}
+
 /* Style the links inside the navigation bar */
 .navbar a {
   float: left;
   color: #f2f2f2;
   text-align: center;
-  padding: 20px 32px;
+  padding: 1.2rem 2.4rem;
   text-decoration: none;
   font-size: 1.1rem;
 }
@@ -36,6 +40,74 @@
   background-color: #f1faee;
   color: black;
   transition: 0.5s;
+}
+
+.nav-search {
+  border-radius: 1rem;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 2rem;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  /* padding: 1rem 2rem; */
+}
+
+.row input {
+  flex: 1;
+  height: 1.5rem;
+  background: #f1faee;
+  border: 0;
+  outline: 0;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  width: 24rem;
+}
+
+.row button {
+  background: #196164;
+  color: #f1faee;
+  border: 0;
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.row button:hover {
+  background: #f1faee;
+  color: #196164;
+}
+
+.row button:active {
+  transform: scale(0.95);
+}
+
+.nav-search-results {
+  position: absolute;
+  display: flex;
+  width: 24rem;
+}
+
+.nav-search-results ul {
+  list-style-type: none;
+  background-color: #f1faee;
+  border-top: 0.1rem solid #000000;
+  border-radius: 1rem;
+  /* vertical gap between li */
+}
+
+.nav-search-results ul li {
+  list-style: none;
+  width: 23rem;
+  display: flex;
+  flex: 1;
+  padding: 0.5rem;
+  border-top: 0.1rem solid #000000;
 }
 
 .logo {

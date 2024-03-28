@@ -9,10 +9,26 @@
   <body>
     <section class="container">
       <div class="navbar">
-        <a class="active" href="index.html">Home</a>
-        <a href="find_songs.html">Sift Search</a>
-        <a href="library.html">Radio</a>
-        <a href="library.html">My artists</a>
+        <div class="navbar-container">
+          <a class="active" href="index.html">Home</a>
+          <a href="find_songs.html">Sift Search</a>
+          <a href="library.html">Radio</a>
+          <a href="library.html">My artists</a>
+          <div class="nav-search">
+            <div class="row">
+              <input type="text" id="input-box" placeholder="Search for songs, artists, albums" />
+              <button>Search</button>
+            </div>
+            <div class="nav-search-results">
+              <ul>
+                <li>Song 1</li>
+                <li>Song 2</li>
+                <li>Artist 1</li>
+                <li>Album 1</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
       <img src="/images/sound_sift_logo.png" alt="logo" class="logo" />
       <p class="sound_sift">SoundSift</p>
