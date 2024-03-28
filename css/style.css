@@ -57,7 +57,7 @@
 
 .row input {
   flex: 1;
-  height: 1.5rem;
+  height: 2rem;
   background: #f1faee;
   border: 0;
   outline: 0;
@@ -67,30 +67,30 @@
   width: 24rem;
 }
 
-.row button {
-  background: #196164;
-  color: #f1faee;
-  border: 0;
-  padding: 0.5rem 1rem;
-  margin-left: 1rem;
-  border-radius: 1rem;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.row button:hover {
-  background: #f1faee;
-  color: #196164;
-}
-
-.row button:active {
-  transform: scale(0.95);
-}
-
 .nav-search-results {
   position: absolute;
   display: flex;
+  flex-direction: column;
   width: 24rem;
+  background-color: #f1faee;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px 0 #00000033;
+  margin-top: 0.2rem;
+}
+
+.nav-search-results a {
+  font-size: 0.9rem;
+  border-radius: 1rem;
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  transition: 0.2s;
+  padding: 0.5rem 1rem;
+}
+
+.nav-search-results a:hover {
+  background-color: #196164;
+  color: #f1faee;
 }
 
 /* .nav-search-results ul {
