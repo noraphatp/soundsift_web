@@ -30,7 +30,7 @@
   float: left;
   color: #f2f2f2;
   text-align: center;
-  padding: 1.2rem 2.4rem;
+  padding: 1rem 2rem;
   text-decoration: none;
   font-size: 1.1rem;
 }
@@ -93,22 +93,26 @@
   width: 24rem;
 }
 
-.nav-search-results ul {
+/* .nav-search-results ul {
   list-style-type: none;
   background-color: #f1faee;
-  border-top: 0.1rem solid #000000;
   border-radius: 1rem;
-  /* vertical gap between li */
 }
 
 .nav-search-results ul li {
   list-style: none;
-  width: 23rem;
+  width: 24rem;
   display: flex;
   flex: 1;
   padding: 0.5rem;
-  border-top: 0.1rem solid #000000;
+  border-radius: 1rem;
 }
+
+.nav-search-results ul li:hover {
+  background-color: #196164;
+  color: #f1faee;
+  cursor: pointer;
+} */
 
 .logo {
   /* make it central without using display block*/
