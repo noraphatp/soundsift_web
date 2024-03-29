@@ -30,7 +30,7 @@
   float: left;
   color: #f2f2f2;
   text-align: center;
-  padding: 1.2rem 2.4rem;
+  padding: 1rem 2rem;
   text-decoration: none;
   font-size: 1.1rem;
 }
@@ -57,7 +57,7 @@
 
 .row input {
   flex: 1;
-  height: 1.5rem;
+  height: 2rem;
   background: #f1faee;
   border: 0;
   outline: 0;
@@ -67,48 +67,52 @@
   width: 24rem;
 }
 
-.row button {
-  background: #196164;
-  color: #f1faee;
-  border: 0;
-  padding: 0.5rem 1rem;
-  margin-left: 1rem;
-  border-radius: 1rem;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.row button:hover {
-  background: #f1faee;
-  color: #196164;
-}
-
-.row button:active {
-  transform: scale(0.95);
-}
-
 .nav-search-results {
   position: absolute;
   display: flex;
+  flex-direction: column;
   width: 24rem;
+  background-color: #f1faee;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px 0 #00000033;
+  margin-top: 0.2rem;
 }
 
-.nav-search-results ul {
+.nav-search-results a {
+  font-size: 0.9rem;
+  border-radius: 1rem;
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  transition: 0.2s;
+  padding: 0.5rem 1rem;
+}
+
+.nav-search-results a:hover {
+  background-color: #196164;
+  color: #f1faee;
+}
+
+/* .nav-search-results ul {
   list-style-type: none;
   background-color: #f1faee;
-  border-top: 0.1rem solid #000000;
   border-radius: 1rem;
-  /* vertical gap between li */
 }
 
 .nav-search-results ul li {
   list-style: none;
-  width: 23rem;
+  width: 24rem;
   display: flex;
   flex: 1;
   padding: 0.5rem;
-  border-top: 0.1rem solid #000000;
+  border-radius: 1rem;
 }
+
+.nav-search-results ul li:hover {
+  background-color: #196164;
+  color: #f1faee;
+  cursor: pointer;
+} */
 
 .logo {
   /* make it central without using display block*/
