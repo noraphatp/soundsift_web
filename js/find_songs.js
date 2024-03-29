@@ -62,10 +62,10 @@ function dispalyResults (result) {
 // search songs functionality
 const songs = [
   // add image cover
-  { name: "Song 1", artist: "Artist A", similarity: 0.93, duration: "2:00", image: "/song_covers/acoustic_1.jpg", album: "Album 1" },
-  { name: "Song 2", artist: "Artist B", similarity: 0.87, duration: "3:28", image: "/song_covers/acoustic_2.jpg", album: "Album 2" },
-  { name: "Song 3", artist: "Artist C", similarity: 0.86, duration: "4:00", image: "/song_covers/night_street_1.jpg", album: "Album 3" },
-  { name: "Song 4", artist: "Artist D", similarity: 0.85, duration: "2:33", image: "/song_covers/night_street_2.jpg", album: "Album 2" },
+  { name: "Song 1", artist: "Artist A", similarity: 0.93, duration: "2:00", image: "/demo_song_covers/acoustic_1.jpg", album: "Album 1" },
+  { name: "Song 2", artist: "Artist B", similarity: 0.87, duration: "3:28", image: "/demo_song_covers/acoustic_2.jpg", album: "Album 2" },
+  { name: "Song 3", artist: "Artist C", similarity: 0.86, duration: "4:00", image: "/demo_song_covers/night_street_1.jpg", album: "Album 3" },
+  { name: "Song 4", artist: "Artist D", similarity: 0.85, duration: "2:33", image: "/demo_song_covers/night_street_2.jpg", album: "Album 2" },
 ];
 
 function searchSong() {
