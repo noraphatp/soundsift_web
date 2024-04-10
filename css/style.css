@@ -122,14 +122,14 @@
   margin-left: auto;
   margin-right: auto;
   /* original dimensions are 1008x992 */
-  width: 11rem;
-  height: 11rem;
+  width: 10rem;
+  height: 10rem;
 }
 
 .sound_sift {
   text-align: center;
   color: #f2f2f2;
-  font-size: 3.5rem;
+  font-size: 2rem;
   padding: 0;
   letter-spacing: 0.1rem;
 }
@@ -163,6 +163,54 @@
   font-size: 1rem;
   margin-top: 0;
   text-align: left;
+}
+
+.song-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* space between */
+  justify-content: space-between;
+  margin: 1rem 1rem;
+  padding: 0.5rem 1rem;
+  color: #f1faee;
+  background-color: #333;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.4rem 0 #00000033;
+}
+
+.song-card:hover {
+  background-color: #424242;
+  transition: 0.2s;
+}
+
+.song-card img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.song-card p:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.song-duration {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.song-duration svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-left: 0.2rem;
+}
+
+.musical-octagon {
+  height: 24rem;
+  width: 24rem;
+  border-radius: 1rem;
+  margin-top: 1rem;
 }
 
 .get_started_button_wrap {
