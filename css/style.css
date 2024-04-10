@@ -122,8 +122,8 @@
   margin-left: auto;
   margin-right: auto;
   /* original dimensions are 1008x992 */
-  width: 252px;
-  height: 248px;
+  width: 11rem;
+  height: 11rem;
 }
 
 .sound_sift {
@@ -134,16 +134,22 @@
   letter-spacing: 0.1rem;
 }
 
+.description-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 2rem;
+}
+
 .description-section {
-  display: inline-block;
+  flex: 1;
   color: #333;
-  margin-top: 0.5rem;
-  margin-left: 20rem;
-  margin-right: 20rem;
   background-color: #f1faee;
-  padding: 2rem 4rem;
-  border-radius: 30px;
-  box-shadow: 0 0 20px 0 #00000033;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 0.2rem 0 #00000033;
 }
 
 .description-header {
@@ -156,6 +162,7 @@
 .description-text {
   font-size: 1rem;
   margin-top: 0;
+  text-align: left;
 }
 
 .get_started_button_wrap {
