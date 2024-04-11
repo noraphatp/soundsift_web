@@ -45,6 +45,7 @@ function dispalyResults (result) {
   navSearchResults.innerHTML = '';
   result.forEach((key) => {
       let a = document.createElement('a');
+      // this is where the link will go, change the array as needed
       a.href = key.link;
       if (key.type === 'artist') {
           a.innerHTML = `Artist: ${key.artistName}`;

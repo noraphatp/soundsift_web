@@ -1,0 +1,242 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 100vw;
+    height: 100vh;
+    /* scrollable */
+    overflow: auto;
+    margin: 0 auto;
+    padding: 0;
+    background: linear-gradient(45deg, #196164, #15173a);
+    text-align: center;
+  }
+  
+  .navbar {
+    background-color: #161616;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 #ffffff33;
+  }
+  
+  .navbar-container {
+    display: flex;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .navbar a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+  
+  /* Change the color of links on hover */
+  .navbar a:hover {
+    background-color: #f1faee;
+    color: black;
+    transition: 0.5s;
+  }
+  
+  .nav-search {
+    border-radius: 1rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 2rem;
+  }
+  
+  .row {
+    display: flex;
+    align-items: center;
+    /* padding: 1rem 2rem; */
+  }
+  
+  .row input {
+    flex: 1;
+    height: 2rem;
+    background: #f1faee;
+    border: 0;
+    outline: 0;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+    width: 24rem;
+  }
+  
+  .nav-search-results {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 24rem;
+    background-color: #f1faee;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px 0 #00000033;
+    margin-top: 0.2rem;
+  }
+  
+  .nav-search-results a {
+    font-size: 0.9rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    transition: 0.2s;
+    padding: 0.5rem 1rem;
+  }
+  
+  .nav-search-results a:hover {
+    background-color: #196164;
+    color: #f1faee;
+  }
+  
+  .main-body-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .side-card-container {
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    height: 100%;
+    background-color: #2e2d2d;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .my-playlists-text {
+    color: #f2f2f2;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .create-new-playlist {
+    background-color: #f2f2f2;
+    color: #2e2d2d;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 1rem;
+    padding: 0.4rem;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px 0 #00000033;
+  }
+  
+  .create-new-playlist:hover {
+    background-color: #413f3f;
+    color: #f2f2f2;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .create-new-playlist:active {
+    background-color: #f1faee;
+    color: #413f3f;
+    transform: scale(1.05);
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .card {
+    display: inline-block;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px 0 #00000033;
+    color: #f2f2f2;
+    text-decoration: none;
+  }
+  
+  .card:hover {
+    background-color: #413f3f;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .card:active {
+    background-color: #f1faee;
+    color: #413f3f;
+    transform: scale(1.05);
+    cursor: pointer;
+    transition: 0.2s;
+    text-decoration: none;
+  }
+  
+  .card img {
+    /* max-width within the size of card */
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  .main-card-container {
+    margin-left: 4rem;
+    margin-top: 2rem;
+  }
+  
+  .main-card-header {
+    text-align: left;
+    color: #f2f2f2;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .card-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .body-card {
+    display: inline-block;
+    padding: 1rem;
+    border-radius: 1rem;
+    color: #f2f2f2;
+    object-fit: contain;
+    background-color: transparent;
+  }
+  
+  .body-card:hover {
+    /* background-color: #413f3f; */
+    box-shadow: 0 0 0.6rem 0 #00000033;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .body-card:active {
+    background-color: #f1faee;
+    color: #413f3f;
+    transform: scale(1.05);
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .artist-name {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  
+  .album-name {
+    font-size: 0.8rem;
+  }
+  
+  .body-card img {
+    width: 100%;
+    height: 12rem;
+    object-fit: contain;
+    border-radius: 6rem;
+    box-shadow: 0 0 1rem 0 #00000033;
+  }
+  
