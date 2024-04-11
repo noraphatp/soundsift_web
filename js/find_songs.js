@@ -1,5 +1,5 @@
 let availableKeys = [
-  {songName: "", artistName: "ABBA", albumName: "", type: "artist",  link: "artist.html"},
+  {songName: "", artistName: "ABBA", albumName: "", type: "artist",  link: "ABBA.html"},
   {songName: "", artistName: "ABBA", albumName: "Super Trouper", type: "album", link: "album.html"},
   {songName: "Super Trouper", artistName: "ABBA", albumName: "Super Trouper", type: "song", link: "song.html"},
   {songName: "B", artistName: "B", albumName: "B", type: "song", link: "song.html"},

@@ -189,6 +189,14 @@
   height: 4rem;
 }
 
+.song-title {
+  flex: 1;
+}
+
+.song-artist {
+  flex: 1;
+}
+
 .song-card p:hover {
   cursor: pointer;
   text-decoration: underline;
@@ -198,6 +206,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  align-self: right;
 }
 
 .song-duration svg {
