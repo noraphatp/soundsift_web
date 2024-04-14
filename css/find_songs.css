@@ -318,7 +318,7 @@
 }
 
 .nested-dropdown-button:active {
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
   transition: 0.2s;
 }
 
@@ -350,7 +350,7 @@
 }
 
 .nested-dropdown-content a:active {
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
   transition: 0.2s;
 }
 
@@ -434,9 +434,8 @@
   transition: 0.3s;
 }
 
-.genre-button:active {
-  transform: scale(1.1);
-}
+/* .genre-button:active {
+} */
 
 .slidecontainer {
   width: 100%; /* Width of the outside container */
