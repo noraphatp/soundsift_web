@@ -275,7 +275,13 @@
 .track-name {
   /* leftmost */
   text-align: left;
-  width: 10rem;
+  min-width: 10rem;
+  flex: 1;
+}
+
+.track-name:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .track-duration {

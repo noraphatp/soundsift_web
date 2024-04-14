@@ -9,9 +9,19 @@
   <body>
     <section class="container">
       <div class="navbar">
-        <a class="active" href="index.html">Home</a>
-        <a href="find_songs.html">Find songs</a>
-        <a href="library.html">Library</a>
+        <div class="navbar-container">
+          <a class="active" href="index.html">Home</a>
+          <a href="find_songs.html">Sift Search</a>
+          <a href="library.html">Radio</a>
+          <a href="my_artists.html">My artists</a>
+          <div class="nav-search">
+            <div class="row">
+              <input type="text" id="input-box" placeholder="Search for songs, artists, albums" autocomplete="off" />
+            </div>
+            <div class="nav-search-results">
+            </div>
+          </div>
+        </div>
       </div>
       <div class="main-body-container">
         <div class="side-card-container">
@@ -30,6 +40,99 @@
             <p>Playlist 3</p>
           </a>
         </div>
+        <div class="main-card-container">
+          <div class="artist-container">
+            <img src="./images/playlist_1.jpg" alt="ABBA" />
+            <p class="main-card-header">Playlist 1</p>
+          </div>
+          <div class="card-container">
+            <div class="body-card">
+              <div class="track-container">
+                <div class="track">
+                  <div class="track-image-name">
+                    <img src="./covers/ABBA — Super Trouper.jpg">
+                    <p class="track-name">ABBA - Super Trouper</p>
+                  </div>
+                  <div class="track-duration">
+                    <p>4:12</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+                  </div>
+                  <svg class="track-play" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
+                  </svg>
+                  <button class="dropdown-button" onclick="createDropdownContent()">
+                    <svg class="track-dots" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="track">
+                  <div class="track-image-name">
+                    <img src="./covers/ABBA — The Winner Takes It All.jpg">
+                    <p class="track-name">ABBA - The Winner Takes It All</p>
+                  </div>
+                  <div class="track-duration">
+                    <p>4:54</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+                  </div>
+                  <svg class="track-play" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
+                  </svg>
+                  <button class="dropdown-button" onclick="createDropdownContent()">
+                    <svg class="track-dots" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="track">
+                  <div class="track-image-name">
+                    <img src="./covers/ABBA — On And On And On.jpg">
+                    <p class="track-name">ABBA - On And On And On</p>
+                  </div>
+                  <div class="track-duration">
+                    <p>3:40</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+                  </div>
+                  <svg class="track-play" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
+                  </svg>
+                  <button class="dropdown-button" onclick="createDropdownContent()">
+                    <svg class="track-dots" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="track">
+                  <div class="track-image-name">
+                    <img src="./covers/ACDC — Back In Black.jpg">
+                    <p class="track-name">ACDC - Back In Black</p>
+                  </div>
+                  <div class="track-duration">
+                    <p>4:16</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+                  </div>
+                  <svg class="track-play" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
+                  </svg>
+                  <button class="dropdown-button" onclick="createDropdownContent()">
+                    <svg class="track-dots" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
     </section>
+    <script src="./js/ABBA.js"></script>
   </body>
 </html>
