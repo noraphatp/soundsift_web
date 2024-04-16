@@ -191,6 +191,7 @@
 
 .song-title {
   flex: 1;
+  min-width: 8rem;
 }
 
 .song-artist {
@@ -216,8 +217,8 @@
 }
 
 .musical-octagon {
-  height: 24rem;
-  width: 24rem;
+  height: 20rem;
+  width: 20rem;
   border-radius: 1rem;
   margin-top: 1rem;
 }
