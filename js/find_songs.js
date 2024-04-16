@@ -135,6 +135,12 @@ function searchSong() {
       `;
       songDiv.appendChild(playButton);
 
+      // Thumbs up and down buttons wrapped inside a div tag
+      const thumbsUpDownDiv = document.createElement("div");
+      thumbsUpDownDiv.classList.add("thumbs-up-down");
+      
+
+
       const dropdownButton = document.createElement("button");
       dropdownButton.classList.add("dropdown-button");
       dropdownButton.innerHTML = `

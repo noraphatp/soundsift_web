@@ -169,7 +169,6 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  /* space between */
   justify-content: space-between;
   margin: 1rem 1rem;
   padding: 0.5rem 1rem;
