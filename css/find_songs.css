@@ -13,6 +13,8 @@
   padding: 0;
   background: linear-gradient(45deg, #196164, #15173a);
   text-align: center;
+  /* justify-content: center;
+  position: relative; */
 }
 
 .navbar {
@@ -124,9 +126,10 @@
 /* Style the input field */
 #searchBar {
   padding: 0.5rem 1rem;
-  font-size: 16px;
+  font-size: 1rem;
   border: 0.2rem solid #ddd;
-  border-radius: 20px;
+  border-radius: 2rem;
+  min-width: 30rem;
   margin-left: 10rem;
 }
 
@@ -151,18 +154,42 @@
   transform: scale(1.1);
 }
 
-.results {
-  /* take up as less width as possible */
+.container-2 {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  margin-right: 3.2rem;
+}
+
+.search-drop-down {
+  flex-direction: column;
+  background-color: #f1faee;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.2rem 0 #00000033;
+  margin-top: 0.2rem;
+  /* margin-right: 3.2rem; */
+  width: 30rem;
+  z-index: 3;
+}
+
+.dropdown-item {
+  background-color: #f1faee;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+}
+
+.dropdown-item:hover {
+  background-color: #196164;
+  color: #f1faee;
+  transition: 0.2s;
 }
 
 .result-box {
-  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 35%;
+  max-width: 40%;
+  /* max-width: 50%; */
   margin: 0 auto;
   padding: 0.5rem 0;
   margin-top: 1rem;
@@ -175,10 +202,6 @@
 
 @media (max-width: 1200px) {
   .results {
-    width: 100%;
-  }
-
-  .result-box {
     width: 100%;
   }
 }
@@ -257,13 +280,36 @@
 
 .play-button:active {
   transform: scale(1.1);
-  transition: 0.2s;
 }
 
 .play-button svg {
   fill: black;
   width: 2rem;
   height: 2rem;
+}
+
+.thumbs-up-down-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.2rem;
+}
+
+.thumbs-button {
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.thumbs-up-down-container svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.thumbs-up-down-container svg:active {
+  transform: scale(1.1);
 }
 
 .dropdown-button {
@@ -285,7 +331,6 @@
 
 .dropdown-button svg:active {
   transform: scale(1.1);
-  transition: 0.2s;
 }
 
 .dropdown-content {
