@@ -61,13 +61,14 @@ function displayResults(result) {
 const song_keys = [
   { name: "Super Trouper", artist: "ABBA" },
   { name: "Back in Black", artist: "ACDC" },
+  { name: "Turning Tables", artist: "Adele" },
 ];
 
 // results of the search
 const songs = [
   // add image cover
-  { name: "Song 1", artist: "Artist A", similarity: 0.93, duration: "2:00", image: "./demo_song_covers/acoustic_1.jpg", album: "Album 1" },
-  { name: "Song 2", artist: "Artist B", similarity: 0.87, duration: "3:28", image: "./demo_song_covers/acoustic_2.jpg", album: "Album 2" },
+  { name: "The Void", artist: "Andy Black", similarity: 0.93, duration: "4:51", image: "./covers/Andy Black — The Shadow Side — The Void.jpg", album: "The Shadow Side" },
+  { name: "One Desire", artist: "Kari Jobe", similarity: 0.87, duration: "3:28", image: "./demo_song_covers/acoustic_2.jpg", album: "Where I Find You" },
   { name: "Song 3", artist: "Artist C", similarity: 0.86, duration: "4:00", image: "./demo_song_covers/night_street_1.jpg", album: "Album 3" },
   { name: "Song 4", artist: "Artist D", similarity: 0.85, duration: "2:33", image: "./demo_song_covers/night_street_2.jpg", album: "Album 2" },
 ];
@@ -103,7 +104,8 @@ document.addEventListener("DOMContentLoaded", function () {
         dropdownItem.textContent = `${song.name} by ${song.artist}`;
         dropdownItem.classList.add("dropdown-item");
         dropdownItem.onclick = () => {
-          searchBar.value = song.name; // set search bar text to the song name
+          // Artist 
+          searchBar.value = `${song.artist} — ${song.name}`;
           searchSong(); // call the search function
           dropdown.style.display = "none"; // hide the dropdown
         };
@@ -228,6 +230,10 @@ function searchSong() {
         </svg>
       `;
 
+      // dropdown content container
+      const dropdownContainer = document.createElement("div");
+      dropdownContainer.classList.add("dropdown-container");
+
       // Primary Dropdown content container
       const dropdownContent = document.createElement("div");
       dropdownContent.classList.add("dropdown-content");
@@ -294,7 +300,7 @@ function searchSong() {
 
       songDiv.appendChild(dropdownButton);
       resultsContainer.appendChild(songDiv);
-      resultsContainer.appendChild(songDiv);
+      // resultsContainer.appendChild(songDiv);
     });
   }
   window.onclick = function () {
