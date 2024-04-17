@@ -190,6 +190,7 @@
   flex-direction: row;
   justify-content: space-between;
   /* set width to fit content */
+  min-width: 50%;
   width: fit-content;
   margin: 0 auto;
   padding: 0.5rem 0;
@@ -277,6 +278,7 @@
   border-radius: 1rem;
   border: none;
   cursor: pointer;
+  background-color: transparent;
 }
 
 .play-button:active {

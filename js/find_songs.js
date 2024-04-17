@@ -68,9 +68,10 @@ const song_keys = [
 const songs = [
   // add image cover
   { name: "The Void", artist: "Andy Black", similarity: 0.93, duration: "4:51", image: "./covers/Andy Black — The Shadow Side — The Void.jpg", album: "The Shadow Side" },
-  { name: "One Desire", artist: "Kari Jobe", similarity: 0.87, duration: "3:28", image: "./demo_song_covers/acoustic_2.jpg", album: "Where I Find You" },
-  { name: "Song 3", artist: "Artist C", similarity: 0.86, duration: "4:00", image: "./demo_song_covers/night_street_1.jpg", album: "Album 3" },
-  { name: "Song 4", artist: "Artist D", similarity: 0.85, duration: "2:33", image: "./demo_song_covers/night_street_2.jpg", album: "Album 2" },
+  { name: "One Desire", artist: "Kari Jobe", similarity: 0.87, duration: "4:45", image: "./covers/Kari Jobe — Where I Find You — One Desire.jpg", album: "Where I Find You" },
+  { name: "The Arena", artist: "Lindsey Stirling", similarity: 0.86, duration: "4:07", image: "./covers/Lindsey Stirling — Brave Enough — The Arena.jpg", album: "Brave Enough" },
+  { name: "Hell, Yeah", artist: "Nothing But Thieves", similarity: 0.85, duration: "3:07", image: "./covers/Nothing But Thieves — Broken Machine — Hell, Yeah.jpg", album: "Broken Machine" },
+  { name: "If Everything Is Worth It", artist: "TIAGO IORC", similarity: 0.83, duration: "3:39", image: "./covers/TIAGO IORC — Umbilical — If Everything Is Worth It.jpg", album: "Umbilical" },
 ];
 
 // Function to search for songs
@@ -119,16 +120,31 @@ document.addEventListener("DOMContentLoaded", function () {
     // Event listener for input on search bar
     searchBar.addEventListener("input", updateDropdown);
 
-    // Event listener for clicking outside of the dropdown to hide it
-    // document.addEventListener("click", (event) => {
-    //   if (!dropdown.contains(event.target) && !searchBar.contains(event.target)) {
-    //     dropdown.style.display = "none";
-    //   }
-    // });
   });
 });
 
+// Create element playButton
+const playButton = document.createElement("button");
+playButton.classList.add("play-button");
+
+const playButtonSvg = `
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+<path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
+</svg>
+`;
+
+const pauseButtonSvg = `
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25v13.5m-7.5-13.5v13.5" />
+</svg>
+`;
+
+
+
+// Function to search for songs
+
 function searchSong() {
+
   const dropdown = document.getElementById("searchDropdown");
   // clear dropdown
   dropdown.innerHTML = "";
@@ -189,13 +205,28 @@ function searchSong() {
 
       songDiv.appendChild(otherDetails);
 
-      const playButton = document.createElement("play-button");
+      // Play button
+      var state = 1;
+
+      const playButton = document.createElement("button");
       playButton.classList.add("play-button");
-      playButton.innerHTML = `
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
-        </svg>
-      `;
+      playButton.innerHTML = playButtonSvg;
+
+      playButton.onclick = function () {
+        console.log("Play button clicked")
+        if (state === 1) {
+          console.log(state);
+          playButton.innerHTML = "";
+          playButton.innerHTML = playButtonSvg;
+          state = 0;
+        } else {
+          console.log(state);
+          playButton.innerHTML = "";
+          playButton.innerHTML = pauseButtonSvg;
+          state = 1;
+        }
+      }
+
       songDiv.appendChild(playButton);
 
       // Thumbs up and down buttons wrapped inside a div tag
@@ -309,6 +340,7 @@ function searchSong() {
     });
   };
 }
+
 
 function clearResults() {
   document.getElementById("results").innerHTML = ""; // clear results
