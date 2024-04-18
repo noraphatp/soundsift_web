@@ -191,10 +191,32 @@
 .song-title {
   flex: 1;
   min-width: 8rem;
+  color: #f1faee;
+  text-decoration: none;
+}
+
+.song-title:visited {
+  color: #f1faee;
+  text-decoration: none;
+}
+
+.song-title:hover {
+  text-decoration: underline;
 }
 
 .song-artist {
   flex: 1;
+  color: #f1faee;
+  text-decoration: none;
+}
+
+.song-artist:visited {
+  color: #f1faee;
+  text-decoration: none;
+}
+
+.song-artist:hover {
+  text-decoration: underline;
 }
 
 .song-card p:hover {
