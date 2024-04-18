@@ -539,9 +539,9 @@ const songs = [
   // add image cover
   { name: "The Void", artist: "Andy Black", similarity: 0.93, duration: "4:51", image: "./covers/Andy Black — The Shadow Side — The Void.jpg", album: "The Shadow Side" },
   { name: "One Desire", artist: "Kari Jobe", similarity: 0.87, duration: "4:45", image: "./covers/Kari Jobe — Where I Find You — One Desire.jpg", album: "Where I Find You" },
-  { name: "The Arena", artist: "Lindsey Stirling", similarity: 0.86, duration: "4:07", image: "./covers/Lindsey Stirling — Brave Enough — The Arena.jpg", album: "Brave Enough" },
+  { name: "If Everything Is Worth It", artist: "TIAGO IORC", similarity: 0.86, duration: "3:39", image: "./covers/TIAGO IORC — Umbilical — If Everything Is Worth It.jpg", album: "Umbilical" },
   { name: "Hell, Yeah", artist: "Nothing But Thieves", similarity: 0.85, duration: "3:07", image: "./covers/Nothing But Thieves — Broken Machine — Hell, Yeah.jpg", album: "Broken Machine" },
-  { name: "If Everything Is Worth It", artist: "TIAGO IORC", similarity: 0.83, duration: "3:39", image: "./covers/TIAGO IORC — Umbilical — If Everything Is Worth It.jpg", album: "Umbilical" },
+  { name: "The Arena", artist: "Lindsey Stirling", similarity: 0.83, duration: "4:07", image: "./covers/Lindsey Stirling — Brave Enough — The Arena.jpg", album: "Brave Enough" },
 ];
 
 // Function to search for songs
