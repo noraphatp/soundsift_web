@@ -59,10 +59,9 @@ function displayResults(result) {
 
 // This will be the song keys that will be used to search for songs
 const song_keys = [
-  { name: "Super Trouper", artist: "ABBA" },
-  { name: "Back in Black", artist: "ACDC" },
-  { name: "Turning Tables", artist: "Adele" },
-  {artist: "King", name: "Steps In Time" },
+{ name: "Back in Black", artist: "ACDC" },
+{ name: "Turning Tables", artist: "Adele" },
+{ artist: "King", name: "Steps In Time" },
 { artist: "Harry Chapin", name: "Sniper and Other Love Songs" },
 { artist: "Jamiroquai", name: "Synkronized" },
 { artist: "Alton McClain & Destiny", name: "The Best Soul & Funk Collection: Extra" },
